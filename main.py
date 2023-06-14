@@ -5,6 +5,8 @@ from aiogram.filters import Command
 from core.utils.commands import set_commands
 from core.settings import settings
 from core.handlers.basic import get_start
+from core.handlers.callback import get_about, get_basic, get_why_atomy, get_business, get_pay_company, \
+    get_video, get_tell
 
 
 async def start_bot(bot: Bot):
@@ -26,7 +28,13 @@ async def start():
     dp.shutdown.register(stop_bot)
 
     dp.message.register(get_start, Command(commands=['start', 'run']))
-
+    dp.callback_query.register(get_about, F.data == 'about')
+    dp.callback_query.register(get_basic, F.data == 'basic')
+    dp.callback_query.register(get_why_atomy, F.data == 'why_atomy')
+    dp.callback_query.register(get_business, F.data == 'business')
+    dp.callback_query.register(get_pay_company, F.data == 'pay_company')
+    dp.callback_query.register(get_video, F.data == 'video')
+    dp.callback_query.register(get_tell, F.data == 'tell')
     try:
         await dp.start_polling(bot)
     finally:
