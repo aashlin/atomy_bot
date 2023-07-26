@@ -9,7 +9,9 @@ from core.handlers.callback import get_about, get_basic, get_why_atomy, get_busi
     get_video, get_tell, get_condition_distributor, get_agent, get_sales_repr, get_specagent, get_exclusive_repr, \
     get_dealer, get_qualif_master, get_sales_master, get_diamond_master, get_star_master, get_sharon_master, \
     get_kraun_master, get_imper_master, get_royal_master, get_sponsor_reward, get_products, get_hair, get_health, \
-    get_leather, get_mouth
+    get_leather, get_mouth, get_condition_master, get_sales_master_b, get_bonuses_master, get_diamond_master_b, \
+    get_sharon_master_b, get_royal_master_b, get_kraun_master_b, get_imper_master_b, get_star_master_b, \
+    get_partner
 
 
 async def start_bot(bot: Bot):
@@ -58,6 +60,17 @@ async def start():
     dp.callback_query.register(get_hair, F.data == 'hair')
     dp.callback_query.register(get_leather, F.data == 'leather')
     dp.callback_query.register(get_mouth, F.data == 'mouth')
+    dp.callback_query.register(get_condition_master, F.data == 'condition_master')
+    dp.callback_query.register(get_bonuses_master, F.data == 'bonuses_master')
+    dp.callback_query.register(get_sales_master_b, F.data == 'sales_master_b')
+    dp.callback_query.register(get_diamond_master_b, F.data == 'diamond_master_b')
+    dp.callback_query.register(get_sharon_master_b, F.data == 'sharon_master_b')
+    dp.callback_query.register(get_star_master_b, F.data == 'star_master_b')
+    dp.callback_query.register(get_royal_master_b, F.data == 'royal_master_b')
+    dp.callback_query.register(get_kraun_master_b, F.data == 'kraun_master_b')
+    dp.callback_query.register(get_imper_master_b, F.data == 'imper_master_b')
+    dp.callback_query.register(get_partner, F.data == 'partner')
+
     try:
         await dp.start_polling(bot)
     finally:

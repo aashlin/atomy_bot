@@ -7,7 +7,7 @@ def get_inl_kbd_basic():
     keyboard_builder.button(text='Раскажи мне о компании Atomy', callback_data='about')
     keyboard_builder.button(text='Раскажи мне о бизнесе Atomy', callback_data='business')
     keyboard_builder.button(text='О продукции компании', callback_data='products')
-    keyboard_builder.button(text='О системе продвижения в бизнесе', callback_data='system')
+    keyboard_builder.button(text='О системе продвижения в бизнесе', callback_data='condition_distributor')
     keyboard_builder.button(text='Заказать такого бота себе', callback_data='buy_bot')
     keyboard_builder.adjust(1, True)
     return keyboard_builder.as_markup()
@@ -52,7 +52,6 @@ def get_inl_kbd_video():
     keyboard_builder.button(text='Главное меню', callback_data='basic')
     keyboard_builder.adjust(1, True)
     return keyboard_builder.as_markup()
-
 
 
 def get_inl_kbd_tell():
@@ -201,7 +200,7 @@ def get_inl_kbd_kraun_master():
 def get_inl_kbd_imper_master():
     keyboard_builder = InlineKeyboardBuilder()
     keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
-    keyboard_builder.button(text='Условия повышения уроавня мастерства', callback_data='level_conditions')
+    keyboard_builder.button(text='Условия повышения уровня мастерства', callback_data='condition_master')
     keyboard_builder.button(text='Шаг назад', callback_data='qualif_master')
     keyboard_builder.button(text='Главное меню', callback_data='basic')
     keyboard_builder.adjust(1, True)
@@ -236,6 +235,101 @@ def get_inl_kbd_products_menu():
     return keyboard_builder.as_markup()
 
 
+def get_inl_kbd_condition_master():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Бонусы и поощрения для мастеров', callback_data='bonuses_master')
+    keyboard_builder.button(text='Шаг назад', callback_data='qualif_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
 
 
+def get_inl_kbd_bonuses_master():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Мастер продаж', callback_data='sales_master_b')
+    keyboard_builder.button(text='Брилиантовый мастер', callback_data='diamond_master_b')
+    keyboard_builder.button(text='Мастер Шаронской розы', callback_data='sharon_master_b')
+    keyboard_builder.button(text='Стар мастер', callback_data='star_master_b')
+    keyboard_builder.button(text='Роял мастер', callback_data='royal_master_b')
+    keyboard_builder.button(text='Краун мастер', callback_data='kraun_master_b')
+    keyboard_builder.button(text='Империал мастер', callback_data='imper_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='condition_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
 
+
+def get_inl_kbd_sales_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Брилиантовый мастер', callback_data='diamond_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+
+def get_inl_kbd_diamond_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Мастер Шаронской розы', callback_data='sharon_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+
+def get_inl_kbd_sharon_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Стар мастер', callback_data='star_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+
+def get_inl_kbd_star_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Роял мастер', callback_data='royal_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+
+def get_inl_kbd_royal_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Краун мастер', callback_data='kraun_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+
+def get_inl_kbd_kraun_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Империал мастер', callback_data='imper_master_b')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+def get_inl_kbd_imper_master_b():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Как стать партнером Атоми', callback_data='partner')
+    keyboard_builder.button(text='Условия повышения уровня мастерства', callback_data='condition_master')
+    keyboard_builder.button(text='Шаг назад', callback_data='bonuses_master')
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
+
+
+def get_inl_kbd_partner():
+    keyboard_builder = InlineKeyboardBuilder()
+    keyboard_builder.button(text='Главное меню', callback_data='basic')
+    keyboard_builder.adjust(1, True)
+    return keyboard_builder.as_markup()
